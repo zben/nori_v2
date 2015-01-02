@@ -1,17 +1,17 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "nori/version"
+require "nori_v2/version"
 
 Gem::Specification.new do |s|
-  s.name        = "nori"
-  s.version     = Nori::VERSION
+  s.name        = "nori_v2"
+  s.version     = NoriV2::VERSION
   s.authors     = ["Daniel Harrington", "John Nunemaker", "Wynn Netherland"]
   s.email       = "me@rubiii.com"
-  s.homepage    = "https://github.com/savonrb/nori"
+  s.homepage    = "https://github.com/savonrb/nori_v2"
   s.summary     = "XML to Hash translator"
   s.description = s.summary
 
-  s.rubyforge_project = "nori"
+  s.rubyforge_project = "nori_v2"
   s.license = "MIT"
 
   s.add_development_dependency "rake",     "~> 10.0"

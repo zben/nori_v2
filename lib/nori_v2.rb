@@ -1,8 +1,8 @@
-require "nori/version"
-require "nori/core_ext"
-require "nori/xml_utility_node"
+require "nori_v2/version"
+require "nori_v2/core_ext"
+require "nori_v2/xml_utility_node"
 
-class Nori
+class NoriV2
 
   def self.hash_key(name, options = {})
     name = name.tr("-", "_") if options[:convert_dashes_to_underscores]
@@ -48,7 +48,7 @@ class Nori
 
   private
   def load_parser(parser)
-    require "nori/parser/#{parser}"
+    require "nori_v2/parser/#{parser}"
     Parser.const_get PARSERS[parser]
   end
 

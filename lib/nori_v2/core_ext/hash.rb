@@ -1,6 +1,6 @@
 require "uri"
 
-class Nori
+class NoriV2
   module CoreExt
     module Hash
 
@@ -72,4 +72,4 @@ class Nori
   end
 end
 
-Hash.send :include, Nori::CoreExt::Hash
+Hash.send :include, NoriV2::CoreExt::Hash

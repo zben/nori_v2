@@ -3,10 +3,10 @@ require "time"
 require "yaml"
 require "bigdecimal"
 
-require "nori/string_with_attributes"
-require "nori/string_io_file"
+require "nori_v2/string_with_attributes"
+require "nori_v2/string_io_file"
 
-class Nori
+class NoriV2
 
   # This is a slighly modified version of the XMLUtilityNode from
   # http://merb.devjavu.com/projects/merb/ticket/95 (has.sox@gmail.com)
@@ -83,7 +83,7 @@ class Nori
 
     def initialize(options, name, attributes = {})
       @options = options
-      @name = Nori.hash_key(name, options)
+      @name = NoriV2.hash_key(name, options)
 
       if converter = options[:convert_attributes_to]
         intermediate = attributes.map {|k, v| converter.call(k, v) }.flatten

@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe Nori do
+describe NoriV2 do
 
-  Nori::PARSERS.each do |parser, class_name|
+  NoriV2::PARSERS.each do |parser, class_name|
     context "using the :#{parser} parser" do
 
       let(:parser) { parser }
@@ -459,7 +459,7 @@ describe Nori do
           'parent_id' => nil
         }
 
-        # puts Nori.parse(topics_xml)['topics'].first.inspect
+        # puts NoriV2.parse(topics_xml)['topics'].first.inspect
         parse(topics_xml)["topics"].first.each do |k,v|
           expect(v).to eq(expected_topic_hash[k])
         end
@@ -640,6 +640,6 @@ describe Nori do
 
   def parse(xml, options = {})
     defaults = {:parser => parser}
-    Nori.new(defaults.merge(options)).parse(xml)
+    NoriV2.new(defaults.merge(options)).parse(xml)
   end
 end

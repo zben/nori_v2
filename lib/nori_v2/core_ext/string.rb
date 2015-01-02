@@ -1,4 +1,4 @@
-class Nori
+class NoriV2
   module CoreExt
     module String
 
@@ -18,4 +18,4 @@ class Nori
   end
 end
 
-String.send :include, Nori::CoreExt::String
+String.send :include, NoriV2::CoreExt::String

@@ -1,4 +1,4 @@
-class Nori
+class NoriV2
   module CoreExt
     module Object
 
@@ -10,4 +10,4 @@ class Nori
   end
 end
 
-Object.send :include, Nori::CoreExt::Object
+Object.send :include, NoriV2::CoreExt::Object
